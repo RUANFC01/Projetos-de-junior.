@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sokden</title>
+
+    <!-- css code here-->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            }
+    
+        .heart::before, 
+        .heart::after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        .text-left,
+        .text-right {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .text-left {
+            margin-right: 20px; /* Espaço entre a palavra esquerda e o coração */
+        }
+
+        .text-right {
+            margin-left: 20px; /* Espaço entre o coração e a palavra direita */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Texto à esquerda -->
+        <div class="text-left">I LOVE</div>
+
+        <!-- Coração -->
+        <div class="heart"></div>
+
+        <!-- Texto à direita -->
+        <div class="text-right">AMOR LIVRE</div>
+    </div>
+</body>
+
+</html>
+ 
